@@ -20,5 +20,20 @@ $black-color: black;
 
 // MIXINS
 
-// ANIMATIONS 
+// TRANSITION
 $main-animation: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+
+// KEYFRAMES
+@keyframes move {
+    0% {
+        transform: translateX(2px);
+    }
+
+    50% {
+        transform: translateX(7px);
+    }
+
+    100% {
+        transform: translateX(2px);
+    }
+}
