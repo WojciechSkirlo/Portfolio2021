@@ -1,0 +1,113 @@
+section#services {
+    // height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .services-wrapper {
+        flex-basis: 1300px;
+        padding: 100px 50px;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 18px;
+            background: $main-color;
+            padding: 4px 9px;
+            display: inline-block;
+            align-self: center;
+        }
+
+        .service-box {
+            margin-top: 50px;
+            width: 100%;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            display: flex;
+
+            .service {
+                flex-basis: 32%;
+                height: 180px;
+                margin-bottom: 2%;
+                display: flex;
+                position: relative;
+                overflow: hidden;
+
+                // background: red;
+                &:hover {
+                    .left-side {
+                        &::before {
+                            height: 70%;
+                            width: 100%;
+                        }
+                    }
+
+                    &::before {
+                        top: calc(30% / 2);
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: -100%;
+                    width: 1px;
+                    height: 70%;
+                    background: $third-color;
+                    transition: $main-animation;
+                }
+
+                .left-side {
+                    flex-basis: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: calc(30% / 2);
+                        background: $main-color-lighter;
+                        height: 70%;
+                        width: 1px;
+                        transition: $main-animation;
+                    }
+
+                    img {
+                        flex-basis: 50%;
+                        width: 50%;
+                        z-index: 2;
+                    }
+                }
+
+                .right-side {
+                    flex-basis: 65%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    padding: 30px;
+                    justify-content: center;
+
+                    h3 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $black-color;
+                        margin-bottom: 14px;
+                    }
+
+                    p {
+                        font-size: 15px;
+                        color: $second-color;
+                        font-weight: 300;
+                    }
+
+                }
+            }
+        }
+    }
+}

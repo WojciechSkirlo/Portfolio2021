@@ -1,14 +1,19 @@
 header {
     width: 100%;
     height: 100vh;
-    // background: $main-color;
+    background: rgba(61, 193, 211, 0.4);
     display: flex;
     flex-direction: column;
+    // background: url(../img/marina-reich-Lh6G7kMdGr0-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
 
     nav {
         flex-basis: 70px;
         display: flex;
         justify-content: space-between;
+        position: relative;
+        z-index: 10;
 
         .logo {
             // background: $main-color;
@@ -45,6 +50,7 @@ header {
                     overflow: hidden;
                     padding: 4px 7px;
                     transition: 250ms $main-animation;
+                    z-index: 2;
 
                     &::before {
                         content: "";

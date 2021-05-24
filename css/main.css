@@ -12,6 +12,7 @@
 header {
   width: 100%;
   height: 100vh;
+  background: rgba(61, 193, 211, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,6 +20,8 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-position: center;
+  background-size: cover;
 }
 
 header nav {
@@ -30,6 +33,8 @@ header nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+  z-index: 10;
 }
 
 header nav .logo {
@@ -79,6 +84,7 @@ header nav .menu-wrapper .menu a {
   padding: 4px 7px;
   -webkit-transition: 250ms 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
   transition: 250ms 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  z-index: 2;
 }
 
 header nav .menu-wrapper .menu a::before {
@@ -99,7 +105,7 @@ header nav .menu-wrapper .menu a::after {
   position: absolute;
   top: 0;
   left: -100%;
-  background: #cf6a87;
+  background: #3dc1d3;
   width: 100%;
   height: 50px;
   z-index: -1;
@@ -158,7 +164,7 @@ header nav .menu-wrapper .socialmedia a.github:hover {
 }
 
 header nav .menu-wrapper .socialmedia a.contact {
-  background: #cf6a87;
+  background: #3dc1d3;
   color: #fff;
   height: 70px;
   width: 70px;
@@ -173,5 +179,306 @@ header nav .menu-wrapper .socialmedia a.contact:hover {
 
 header nav .menu-wrapper .socialmedia a i {
   font-size: 17px;
+}
+
+section#about-me {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#about-me .about-me-wrapper {
+  -ms-flex-preferred-size: 1300px;
+      flex-basis: 1300px;
+  padding: 100px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section#about-me .about-me-wrapper .lifeline {
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+  position: relative;
+  padding: 20px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+section#about-me .about-me-wrapper .lifeline .line {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  background: rgba(61, 193, 211, 0.4);
+  height: 2px;
+  width: 90%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section#about-me .about-me-wrapper .lifeline .line .line-history {
+  background: black;
+  height: 10px;
+  width: 10px;
+  -webkit-transform: translateY(-4.25px);
+          transform: translateY(-4.25px);
+  position: relative;
+  font-size: 15px;
+}
+
+section#about-me .about-me-wrapper .lifeline .line .line-history .history {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 250px;
+  margin-bottom: 10px;
+  -webkit-transform: rotate(-90deg) translateY(-5px);
+          transform: rotate(-90deg) translateY(-5px);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+section#about-me .about-me-wrapper .lifeline .line .line-history .history span {
+  line-height: 20px;
+  display: block;
+}
+
+section#about-me .about-me-wrapper .lifeline .line .line-history .history-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 250px;
+  margin-top: 30px;
+  -webkit-transform: rotate(90deg) translateY(-15px);
+          transform: rotate(90deg) translateY(-15px);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+section#about-me .about-me-wrapper .lifeline .line .line-history .history-2 span {
+  line-height: 20px;
+  display: block;
+}
+
+section#about-me .about-me-wrapper .about-me-wrapper-right {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+section#about-me .about-me-wrapper .about-me-wrapper-right h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 18px;
+  background: #3dc1d3;
+  padding: 4px 9px;
+  display: inline-block;
+}
+
+section#about-me .about-me-wrapper .about-me-wrapper-right h1 {
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 110%;
+  margin: 30px 0;
+}
+
+section#about-me .about-me-wrapper .about-me-wrapper-right .wrapper p {
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.big-mark {
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+
+.big-mark::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(61, 193, 211, 0.4);
+  height: 15px;
+  z-index: -1;
+}
+
+.small-mark {
+  position: relative;
+  background: #3dc1d3;
+}
+
+section#services {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#services .services-wrapper {
+  -ms-flex-preferred-size: 1300px;
+      flex-basis: 1300px;
+  padding: 100px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section#services .services-wrapper h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 18px;
+  background: #3dc1d3;
+  padding: 4px 9px;
+  display: inline-block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section#services .services-wrapper .service-box {
+  margin-top: 50px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section#services .services-wrapper .service-box .service {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+  height: 180px;
+  margin-bottom: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+section#services .services-wrapper .service-box .service:hover .left-side::before {
+  height: 70%;
+  width: 100%;
+}
+
+section#services .services-wrapper .service-box .service:hover::before {
+  top: calc(30% / 2);
+}
+
+section#services .services-wrapper .service-box .service::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -100%;
+  width: 1px;
+  height: 70%;
+  background: #ced6e0;
+  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+section#services .services-wrapper .service-box .service .left-side {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+section#services .services-wrapper .service-box .service .left-side::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: calc(30% / 2);
+  background: rgba(61, 193, 211, 0.4);
+  height: 70%;
+  width: 1px;
+  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+section#services .services-wrapper .service-box .service .left-side img {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  width: 50%;
+  z-index: 2;
+}
+
+section#services .services-wrapper .service-box .service .right-side {
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  padding: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#services .services-wrapper .service-box .service .right-side h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 14px;
+}
+
+section#services .services-wrapper .service-box .service .right-side p {
+  font-size: 15px;
+  color: #747d8c;
+  font-weight: 300;
 }
 /*# sourceMappingURL=main.css.map */
