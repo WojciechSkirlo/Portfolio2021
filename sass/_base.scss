@@ -1,0 +1,23 @@
+// RESETS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// FONTS
+* {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+// VARIABLES
+$main-color: #cf6a87;
+$second-color: #747d8c;
+$third-color: #ced6e0;
+$font-color: #fff;
+$black-color: black;
+
+// MIXINS
+
+// ANIMATIONS 
+$main-animation: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);

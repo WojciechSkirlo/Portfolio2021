@@ -1,0 +1,141 @@
+header {
+    width: 100%;
+    height: 100vh;
+    // background: $main-color;
+    display: flex;
+    flex-direction: column;
+
+    nav {
+        flex-basis: 70px;
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            // background: $main-color;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            // background: red;
+            a {
+                height: 35px;
+
+                img {
+                    height: 35px;
+                    margin-left: 20px;
+                }
+            }
+
+        }
+
+        .menu-wrapper {
+            display: flex;
+
+            .menu {
+                display: flex;
+                align-items: center;
+
+                a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    margin: 0 30px;
+                    color: black;
+                    font-size: 16px;
+                    position: relative;
+                    overflow: hidden;
+                    padding: 4px 7px;
+                    transition: 250ms $main-animation;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: -100%;
+                        background: $third-color;
+                        width: 100%;
+                        height: 50px;
+                        z-index: -1;
+                        transition: $main-animation;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: -100%;
+                        background: $main-color;
+                        width: 100%;
+                        height: 50px;
+                        z-index: -1;
+                        transition: 250ms $main-animation;
+                    }
+
+                    &:hover::before {
+                        right: 0;
+                    }
+
+                    &:hover::after {
+                        left: 0;
+                    }
+
+                    &:hover {
+                        color: $font-color;
+                    }
+                }
+            }
+
+            .socialmedia {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // background: chartreuse;
+
+                a {
+                    text-decoration: none;
+                    color: $second-color;
+                    height: 50px;
+                    width: 50px;
+                    // margin: 0 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: $main-animation;
+
+                    // // background: crimson;
+                    // &:hover {
+                    //     transition: $main-animation;
+                    // }
+
+                    &.fb {
+                        &:hover {
+                            color: #3b5998;
+                        }
+                    }
+
+                    &.github {
+                        &:hover {
+                            color: #24292e;
+                        }
+                    }
+
+                    &.contact {
+                        background: $main-color;
+                        color: $font-color;
+                        height: 70px;
+                        width: 70px;
+                        margin: 0;
+                        transform: $main-animation;
+
+                        &:hover {
+                            background: $black-color;
+                        }
+                    }
+
+                    i {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
