@@ -16,6 +16,7 @@ header {
         transform: translate(-50%, -50%);
         font-weight: 100;
         font-size: 6rem;
+        text-align: center;
 
         span {
             text-transform: uppercase;
@@ -37,7 +38,7 @@ header {
         justify-content: space-between;
 
         &.newcolor {
-            background: #fff;
+            background: $white-color;
             transition: $main-animation;
             box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
         }
@@ -51,8 +52,17 @@ header {
                 text-decoration: none;
 
                 h2 {
-                    font-weight: 200;
+                    font-weight: 400;
                     color: $main-color;
+                    text-transform: uppercase;
+                    padding: 4px 9px;
+                    font-size: 22px;
+
+                    &.changecolor {
+                        color: $white-color;
+                        background: $main-color;
+                        transition: $main-animation;
+                    }
                 }
 
                 img {
@@ -87,7 +97,7 @@ header {
                         position: absolute;
                         top: 0;
                         right: -100%;
-                        background: #fff;
+                        background: $white-color;
                         width: 100%;
                         height: 50px;
                         z-index: -1;
@@ -115,7 +125,7 @@ header {
                     }
 
                     &:hover {
-                        color: $font-color;
+                        color: $white-color;
                     }
                 }
             }
@@ -150,7 +160,7 @@ header {
 
                     &.contact {
                         background: $main-color;
-                        color: $font-color;
+                        color: $white-color;
                         height: 70px;
                         width: 70px;
                         margin: 0;
@@ -200,7 +210,7 @@ header {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #fff;
+    color: $white-color;
     font-weight: 300;
     font-size: 14px;
     text-transform: uppercase;

@@ -74,7 +74,6 @@ section#portfolio {
                     position: absolute;
                     bottom: 0;
                     left: 0;
-                    // background: red;
                     width: 100%;
                     display: flex;
                     padding: 20px;
@@ -89,6 +88,7 @@ section#portfolio {
                         padding: 4px 5px;
                         font-size: 13px;
                         margin-right: 8px;
+                        text-transform: uppercase;
                     }
                 }
 
@@ -96,7 +96,7 @@ section#portfolio {
                     font-weight: 500;
                     text-transform: uppercase;
                     font-size: 18px;
-                    background: #fff;
+                    background: $white-color;
                     padding: 4px 9px;
                     display: inline-block;
                     align-self: center;

@@ -1,25 +1,21 @@
 // SCROLL TO TOP
 const scrollToTop = document.querySelector("#scroll-to-top");
+const nav = document.querySelector("#main-nav");
+const myName = document.querySelector("#name");
 document.addEventListener("scroll", function () {
     let distance = window.pageYOffset;
-    // console.log(distance);
     if (distance > 900) {
         scrollToTop.classList.remove("hidden");
     } else {
         scrollToTop.classList.add("hidden");
     }
-})
 
-
-// FIXED NAV
-const nav = document.querySelector("#main-nav");
-document.addEventListener("scroll", function () {
-    let distance = window.pageYOffset;
-    // console.log(distance);
     if (distance > 50) {
         nav.classList.add("newcolor");
+        myName.classList.add("changecolor");
     } else {
         nav.classList.remove("newcolor");
+        myName.classList.remove("changecolor");
     }
 })
 

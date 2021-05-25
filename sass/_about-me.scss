@@ -57,7 +57,6 @@ section#about-me {
                         left: 0;
                         height: 20px;
                         width: 250px;
-                        // background: red;
                         margin-top: 30px;
                         transform: rotate(90deg) translateY(-15px);
                         transform-origin: 0 0;
@@ -99,6 +98,7 @@ section#about-me {
                 p {
                     font-weight: 200;
                     font-size: 16px;
+                    color: $second-color;
 
                     &:first-of-type {
                         margin-bottom: 30px;
@@ -129,4 +129,5 @@ section#about-me {
 .small-mark {
     background: $main-color-lighter;
     text-transform: uppercase;
+    color: $black-color;
 }
