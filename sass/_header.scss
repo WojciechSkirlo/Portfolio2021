@@ -2,10 +2,9 @@ header {
     width: 100%;
     height: 100vh;
     min-height: 600px;
-    background: rgba(61, 193, 211, 0.4);
     display: flex;
     flex-direction: column;
-    // background: url(../img/marina-reich-Lh6G7kMdGr0-unsplash.jpg);
+    background: rgba(61, 193, 211, 0.4);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -30,9 +29,18 @@ header {
     nav {
         flex-basis: 70px;
         display: flex;
-        justify-content: space-between;
-        position: relative;
+        justify-content: flex-end;
+        top: 0;
+        right: 0;
+        position: fixed;
         z-index: 10;
+        width: 100%;
+
+        &.newcolor {
+            background: #fff;
+            transition: $main-animation;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        }
 
         .logo {
             // background: $main-color;
@@ -42,7 +50,7 @@ header {
 
             // background: red;
             a {
-                height: 35px;
+                // height: 35px;
 
                 img {
                     height: 40px;
