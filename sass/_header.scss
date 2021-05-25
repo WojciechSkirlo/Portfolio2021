@@ -28,13 +28,13 @@ header {
 
     nav {
         flex-basis: 70px;
-        display: flex;
-        justify-content: flex-end;
         top: 0;
         right: 0;
         position: fixed;
         z-index: 10;
         width: 100%;
+        display: flex;
+        justify-content: space-between;
 
         &.newcolor {
             background: #fff;
@@ -43,14 +43,17 @@ header {
         }
 
         .logo {
-            // background: $main-color;
             display: flex;
-            justify-content: flex-start;
             align-items: center;
+            margin-left: 50px;
 
-            // background: red;
             a {
-                // height: 35px;
+                text-decoration: none;
+
+                h2 {
+                    font-weight: 200;
+                    color: $main-color;
+                }
 
                 img {
                     height: 40px;
@@ -121,23 +124,17 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                // background: chartreuse;
 
                 a {
                     text-decoration: none;
                     color: $black-color;
                     height: 50px;
                     width: 50px;
-                    // margin: 0 10px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     transition: $main-animation;
 
-                    // // background: crimson;
-                    // &:hover {
-                    //     transition: $main-animation;
-                    // }
 
                     &.fb {
                         &:hover {

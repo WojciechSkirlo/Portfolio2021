@@ -124,7 +124,6 @@ footer {
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            // background: chartreuse;
 
             p {
                 color: white;
@@ -135,14 +134,9 @@ footer {
                     text-decoration: none;
                     color: #fff;
 
-                    img {
-                        height: 18px;
-                        transform: translate(-2px, 3px);
+                    &:hover {
+                        text-decoration: underline;
                     }
-
-                    // &:hover {
-                    //     text-decoration: underline;
-                    // }
                 }
             }
         }

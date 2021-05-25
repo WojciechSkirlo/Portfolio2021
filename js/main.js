@@ -1,3 +1,4 @@
+// SCROLL TO TOP
 const scrollToTop = document.querySelector("#scroll-to-top");
 document.addEventListener("scroll", function () {
     let distance = window.pageYOffset;
@@ -9,7 +10,21 @@ document.addEventListener("scroll", function () {
     }
 })
 
-// Canvas
+
+// FIXED NAV
+const nav = document.querySelector("#main-nav");
+document.addEventListener("scroll", function () {
+    let distance = window.pageYOffset;
+    // console.log(distance);
+    if (distance > 50) {
+        nav.classList.add("newcolor");
+    } else {
+        nav.classList.remove("newcolor");
+    }
+})
+
+
+// CANVAS
 window.onload = function () {
     //functions definition
 

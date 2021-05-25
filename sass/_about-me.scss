@@ -32,7 +32,6 @@ section#about-me {
                     height: 10px;
                     width: 10px;
                     transform: translateY(-4.25px);
-                    // cursor: pointer;
                     position: relative;
                     font-size: 15px;
 
@@ -42,7 +41,6 @@ section#about-me {
                         left: 0;
                         height: 20px;
                         width: 250px;
-                        // background: red;
                         margin-bottom: 10px;
                         transform: rotate(-90deg) translateY(-5px);
                         transform-origin: 0 0;
@@ -71,27 +69,6 @@ section#about-me {
                     }
                 }
             }
-
-
-            // &::before {
-            //     content: "";
-            //     position: absolute;
-            //     left: 60px;
-            //     bottom: 0;
-            //     height: 90%;
-            //     background: $main-color-lighter;
-            //     width: 2px;
-            // }
-
-            // &::after {
-            //     content: "";
-            //     position: absolute;
-            //     left: 0px;
-            //     bottom: 60px;
-            //     height: 2px;
-            //     background: $main-color-lighter;
-            //     width: 90%;
-            // }
         }
 
         .about-me-wrapper-right {
@@ -122,6 +99,10 @@ section#about-me {
                 p {
                     font-weight: 200;
                     font-size: 16px;
+
+                    &:first-of-type {
+                        margin-bottom: 30px;
+                    }
                 }
             }
         }
@@ -143,4 +124,9 @@ section#about-me {
         height: 15px;
         z-index: -1;
     }
+}
+
+.small-mark {
+    background: $main-color-lighter;
+    text-transform: uppercase;
 }
