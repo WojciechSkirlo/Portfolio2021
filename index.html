@@ -10,10 +10,10 @@
         content="Tak właściwie to nazywam się Skirło Wojciech. Pochodzę z niewielkiej miejscowości położonej 50 km od Krakowa. Od najmłodszych lat interesuję się komputerem a w 2021 roku zostałem absolwentem kierunku Technik Informatyk. Z każdym dniem wzbogacam się o nowe umiejętności a w przyszłości chcę pracować jako FRONTEND DEVELOPER." />
     <meta name="keywords"
         content="woytek, wojciechskirlo, skirło, wojciech, wojtek, skirlo, strona internetowa, strony internetowe, strona internetowa na zamówienie, strony internetowe" />
-    <!-- <link rel="stylesheet" href="css/all.css"> -->
+    <link rel="Shortcut icon" href="img/thumbnail.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,27 +23,36 @@
 <body>
     <main>
         <header>
+            <!-- MAIN NAV -->
             <nav>
                 <div class="logo">
-                    <a href="#">
-                        <img src="img/Bez nazwy-1.png" alt="">
+                    <a href="index.html">
+                        <img src="img/logo-4.png" alt="">
                     </a>
                 </div>
                 <div class="menu-wrapper">
                     <div class="menu">
                         <a href="#">home</a>
-                        <a href="#">o mnie</a>
-                        <a href="#">usługi</a>
-                        <a href="#">portfolio</a>
-                        <a href="#">kontakt</a>
+                        <a href="#about-me">o mnie</a>
+                        <a href="#services">usługi</a>
+                        <a href="#portfolio">portfolio</a>
+                        <a href="#contact">kontakt</a>
                     </div>
                     <div class="socialmedia">
-                        <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="github"><i class="fab fa-github"></i></a>
-                        <a href="#" class="contact"><i class="fas fa-paper-plane"></i></a>
+                        <a href="https://www.facebook.com/WojciechSkirlo/" target="_blank" class="fb"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://github.com/WojciechSkirlo" target="_blank" class="github"><i
+                                class="fab fa-github"></i></a>
+                        <a href="mailto:wojciechskiro@gmail.com" class="contact"><i class="fas fa-paper-plane"></i></a>
                     </div>
                 </div>
             </nav>
+            <canvas id="canvas"></canvas>
+            <div class="scroll-down">
+                <span>scroll me</span>
+                <i class="fas fa-angle-double-down"></i>
+            </div>
+            <h1 class="hello">Cześć! Jestem <span>Woytek</span></h1>
         </header>
 
         <!-- ABOUT ME -->
@@ -214,9 +223,6 @@
                         <img src="/img/thumbnail-logo.png" alt="">
                         <div class="info">
                             <h2>ProjectQ12</h2>
-                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ad, modi voluptatum
-                                expedita
-                                nobis consequuntur cupiditate aperiam distinctio.</p> -->
                             <a href="#">Sprawdź Live <i class="fas fa-angle-double-right"></i></a>
                             <a href="#">GitHub <i class="fas fa-angle-double-right"></i></a>
                         </div>
@@ -280,6 +286,82 @@
             </div>
         </section>
     </main>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="footer-up">
+            <div class="wrapper">
+                <div class="wrapper-left">
+                    <h2>kontakt</h2>
+                    <h3><i class="fas fa-envelope"></i>Email:
+                        <a href="mailto:wojciechskiro@gmail.com">wojciechskiro@gmail.com</a>
+                    </h3>
+                    <h3><i class="fas fa-phone-volume"></i>Tel:
+                        <a href="tel:+48733789494">+48 733-789-494</a>
+                    </h3>
+                    <div class="socialmedia">
+                        <div class="social">
+                            <a href="https://www.facebook.com/WojciechSkirlo/" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                        <div class="social">
+                            <a href="https://github.com/WojciechSkirlo" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-down">
+            <div class="wrapper">
+                <p><a href="index.html"><img src="/img/logo.png" alt="logo"></a> &copy 2021. Wszelkie prawa
+                    zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-up hidden" id="scroll-to-top">to up</a>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js">
+    </script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 700
+        });
+    </script>
+
+    <!-- SPACEWORM -->
+    <script>
+        window.requestAnimFrame = (function () {
+            return (
+                window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame ||
+                function (callback) {
+                    window.setTimeout(callback);
+                }
+            );
+        });
+
+        function init(elemid) {
+            let canvas = document.getElementById(elemid),
+                c = canvas.getContext("2d"),
+                w = (canvas.width = window.innerWidth),
+                h = (canvas.height = window.innerHeight);
+            c.fillStyle = "rgba(30,30,30,1)";
+            c.fillRect(0, 0, w, h);
+            return { c: c, canvas: canvas };
+        }
+    </script>
+
 </body>
 
 </html>

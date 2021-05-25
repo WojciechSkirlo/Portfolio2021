@@ -37,3 +37,17 @@ $main-animation: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
         transform: translateX(2px);
     }
 }
+
+@keyframes scroll-me {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

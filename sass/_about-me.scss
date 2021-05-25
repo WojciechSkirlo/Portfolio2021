@@ -1,14 +1,11 @@
 section#about-me {
-    // height: 700px;
     width: 100%;
-    // background: red;
     display: flex;
     justify-content: center;
 
     .about-me-wrapper {
-        // background: magenta;
         flex-basis: 1300px;
-        padding: 100px 50px;
+        padding: 100px 50px 130px 50px;
         display: flex;
 
         .lifeline {
@@ -146,9 +143,4 @@ section#about-me {
         height: 15px;
         z-index: -1;
     }
-}
-
-.small-mark {
-    position: relative;
-    background: $main-color;
 }

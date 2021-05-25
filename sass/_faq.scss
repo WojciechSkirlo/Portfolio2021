@@ -1,14 +1,12 @@
-section#portfolio {
+section#faq {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 
-    .portfolio-wrapper {
-        flex-basis: 1500px;
-        display: flex;
+    .faq-wrapper {
+        flex-basis: 1300px;
+        margin-bottom: 50px;
         flex-direction: column;
-        margin-bottom: 100px;
 
         h2 {
             font-weight: 500;
@@ -21,120 +19,22 @@ section#portfolio {
             margin-bottom: 50px;
         }
 
-    }
-
-    .works {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        .work {
-            flex-basis: 350px;
-            background: $main-color-lighter;
-            height: 350px;
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 20px;
-            margin-right: 20px;
+        .questions {
+            width: 100%;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
 
-            &:hover {
-                .info {
-                    right: 0;
-                }
-
-                img {
-                    transform: scale(1.08);
-                }
-            }
-
-            img {
-                width: 40%;
-                transition: $main-animation;
-            }
-
-            .info {
-                position: absolute;
-                top: 0;
-                right: -100%;
-                background: rgba(61, 193, 211, 0.8);
+            .question {
                 width: 100%;
-                height: 100%;
-                transition: $main-animation;
-                padding: 40px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                background: $third-color;
+                flex-basis: 70px;
+                margin-bottom: 20px;
+                padding: 10px;
 
-                .tech-wrapper {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    // background: red;
-                    width: 100%;
-                    display: flex;
-                    padding: 20px;
-                    justify-items: center;
-                    align-items: center;
-                    flex-wrap: wrap;
-
-                    h4 {
-                        font-weight: 400;
-                        background: $black-color;
-                        color: white;
-                        padding: 4px 5px;
-                        font-size: 13px;
-                        margin-right: 8px;
-                    }
-                }
-
-                h2 {
-                    font-weight: 500;
-                    text-transform: uppercase;
-                    font-size: 18px;
-                    background: #fff;
-                    padding: 4px 9px;
-                    display: inline-block;
-                    align-self: center;
-                }
-
-                p {
-                    font-size: 16px;
-                    margin-top: 20px;
-                    text-align: center;
-                    font-weight: 400;
-                }
-
-                a {
-                    margin-top: 10px;
-                    text-decoration: none;
-                    color: $black-color;
-
-                    &:hover {
-                        i {
-                            animation: move 400ms infinite;
-                        }
-                    }
-
-                    i {
-                        transform: translateX(2px);
-                        animation: move 700ms infinite;
-
-                    }
+                &:last-of-type {
+                    margin: 0;
                 }
             }
-        }
-
-        .margin-right {
-            margin-right: 0;
-        }
-
-        .margin-bottom {
-            margin-bottom: 0;
         }
     }
 }
