@@ -134,6 +134,19 @@ $main-animation: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
     }
 }
 
+@keyframes move-down {
+
+    0% {
+        transform: translate(-50%, -35%);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
 @keyframes dot {
     50% {
         transform: translateX(96px);

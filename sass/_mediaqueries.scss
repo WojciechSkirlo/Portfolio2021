@@ -107,7 +107,7 @@
 
     header {
         #canvas {
-            height: 100%;
+            height: calc(100% - 60px);
         }
 
         nav#main-nav {
@@ -259,14 +259,14 @@
 
     header {
         nav#mobile-nav {
-            width: 70%;
+            width: 72%;
         }
     }
 
     section#about-me {
         .about-me-wrapper {
             flex-basis: 100%;
-            padding: 60px 20px;
+            padding: 60px 20px 30px;
             flex-direction: column;
         }
     }
@@ -310,6 +310,8 @@
 
     header {
         nav#mobile-nav {
+            width: 75%;
+
             .wrapper {
                 .menu {
                     a {
@@ -318,9 +320,7 @@
                 }
             }
         }
-    }
 
-    header {
         .hello {
             font-size: 5rem;
             width: 100%;
@@ -406,7 +406,7 @@
     section#about-me {
         .about-me-wrapper {
             flex-basis: 100%;
-            padding: 50px 15px;
+            padding: 50px 15px 15px;
             flex-direction: column;
         }
     }

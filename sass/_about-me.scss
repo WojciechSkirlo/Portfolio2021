@@ -97,7 +97,7 @@ section#about-me {
             .wrapper {
                 p {
                     font-weight: 200;
-                    font-size: 16px;
+                    font-size: 15px;
                     color: $second-color;
 
                     &:first-of-type {
@@ -127,7 +127,7 @@ section#about-me {
 }
 
 .small-mark {
-    background: $main-color-lighter;
+    background: $main-color;
     text-transform: uppercase;
     color: $black-color;
 }

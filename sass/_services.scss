@@ -27,7 +27,7 @@ section#services {
             display: flex;
 
             .service {
-                flex-basis: 32%;
+                flex-basis: calc(100% / 3);
                 height: 180px;
                 margin-bottom: 2%;
                 display: flex;

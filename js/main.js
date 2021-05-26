@@ -22,8 +22,10 @@ document.addEventListener("scroll", function () {
 // LOADER
 window.addEventListener("load", function () {
     const loader = document.querySelector("#loader");
+    const h1 = document.querySelector("h1.hello");
     loader.classList.add("hidden");
     document.body.classList.remove("hidden-o");
+    h1.classList.add("animation-move");
 });
 
 // MOBILE MENU

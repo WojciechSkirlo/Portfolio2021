@@ -163,6 +163,32 @@
   }
 }
 
+@-webkit-keyframes move-down {
+  0% {
+    -webkit-transform: translate(-50%, -35%);
+            transform: translate(-50%, -35%);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes move-down {
+  0% {
+    -webkit-transform: translate(-50%, -35%);
+            transform: translate(-50%, -35%);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes dot {
   50% {
     -webkit-transform: translateX(96px);
@@ -206,8 +232,8 @@ header {
   background-position: center;
   background-size: cover;
   position: relative;
-  -webkit-transition: height 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: height 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: height 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: height 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 header .hello {
@@ -221,12 +247,17 @@ header .hello {
   text-align: center;
 }
 
+header .hello.animation-move {
+  -webkit-animation: move-down 800ms both cubic-bezier(0.39, 0.575, 0.565, 1);
+          animation: move-down 800ms both cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
 header .hello span {
   text-transform: uppercase;
 }
 
 header #canvas {
-  height: calc(100% - 70px);
+  height: 100%;
 }
 
 header #darker {
@@ -514,7 +545,6 @@ header .logo-mobile a h2 {
   font-weight: 400;
   color: #3dc1d3;
   text-transform: uppercase;
-  padding: 4px 9px;
   font-size: 22px;
   line-height: 60px;
 }
@@ -836,7 +866,7 @@ section#about-me .about-me-wrapper .about-me-wrapper-right h1 {
 
 section#about-me .about-me-wrapper .about-me-wrapper-right .wrapper p {
   font-weight: 200;
-  font-size: 16px;
+  font-size: 15px;
   color: #636c7b;
 }
 
@@ -862,7 +892,7 @@ section#about-me .about-me-wrapper .about-me-wrapper-right .wrapper p:first-of-t
 }
 
 .small-mark {
-  background: rgba(61, 193, 211, 0.4);
+  background: #3dc1d3;
   text-transform: uppercase;
   color: #000;
 }
@@ -916,8 +946,8 @@ section#services .services-wrapper .service-box {
 }
 
 section#services .services-wrapper .service-box .service {
-  -ms-flex-preferred-size: 32%;
-      flex-basis: 32%;
+  -ms-flex-preferred-size: calc(100% / 3);
+      flex-basis: calc(100% / 3);
   height: 180px;
   margin-bottom: 2%;
   display: -webkit-box;
@@ -1452,7 +1482,7 @@ footer .footer-down .wrapper p a:hover {
 
 @media (max-width: 1100px) {
   header #canvas {
-    height: 100%;
+    height: calc(100% - 60px);
   }
   header nav#main-nav {
     display: none;
@@ -1583,12 +1613,12 @@ footer .footer-down .wrapper p a:hover {
 
 @media (max-width: 576px) {
   header nav#mobile-nav {
-    width: 70%;
+    width: 72%;
   }
   section#about-me .about-me-wrapper {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    padding: 60px 20px;
+    padding: 60px 20px 30px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1623,6 +1653,9 @@ footer .footer-down .wrapper p a:hover {
 }
 
 @media (max-width: 480px) {
+  header nav#mobile-nav {
+    width: 75%;
+  }
   header nav#mobile-nav .wrapper .menu a {
     font-size: 22px;
   }
@@ -1683,7 +1716,7 @@ footer .footer-down .wrapper p a:hover {
   section#about-me .about-me-wrapper {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    padding: 50px 15px;
+    padding: 50px 15px 15px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
