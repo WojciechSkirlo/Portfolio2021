@@ -4,11 +4,11 @@ header {
     min-height: 600px;
     display: flex;
     flex-direction: column;
-    background-image: url(../img/background-2.jpg);
+    background-image: url(../img/background.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
-    transition: $main-animation;
+    transition: height $main-animation;
 
     .hello {
         position: absolute;
