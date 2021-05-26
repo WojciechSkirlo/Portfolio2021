@@ -19,6 +19,13 @@ document.addEventListener("scroll", function () {
     }
 })
 
+// LOADER
+window.addEventListener("load", function () {
+    const loader = document.querySelector("#loader");
+    loader.classList.add("hidden");
+    document.body.classList.remove("hidden-o");
+});
+
 
 // CANVAS
 window.onload = function () {

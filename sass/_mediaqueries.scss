@@ -1,0 +1,434 @@
+@media (max-width: 1600px) {
+    section#about-me {
+        .about-me-wrapper {
+            flex-basis: 1200px;
+            padding: 100px 0 130px 0;
+        }
+    }
+
+    section#services {
+        .services-wrapper {
+            flex-basis: 1200px;
+            padding: 70px 0;
+
+            .service-box {
+                .service {
+                    flex-basis: 32.5%;
+                }
+            }
+        }
+    }
+
+    section#portfolio {
+        .portfolio-wrapper {
+            flex-basis: 1200px;
+
+            .works {
+                .work {
+                    &:nth-of-type(3n) {
+                        margin-right: 0;
+                    }
+
+                    &:nth-of-type(4n) {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    section#about-me {
+        .about-me-wrapper {
+            flex-basis: 900px;
+            padding: 70px 0;
+        }
+    }
+
+    section#services {
+        .services-wrapper {
+            flex-basis: 900px;
+
+            .service-box {
+                .service {
+                    flex-basis: 49.5%;
+                }
+            }
+        }
+    }
+
+    section#portfolio {
+        .portfolio-wrapper {
+            flex-basis: 900px;
+            margin: 50px 0;
+
+            .works {
+                justify-content: center;
+
+                .work {
+                    flex-basis: 400px;
+                    height: 400px;
+
+                    &:nth-of-type(3n) {
+                        margin-right: 20px;
+                    }
+
+                    &:nth-of-type(4n) {
+                        margin-right: 0;
+                    }
+
+                    &:nth-of-type(2n) {
+                        margin-right: 0;
+                    }
+
+                    &:nth-of-type(7) {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+
+    header {
+        nav {
+            display: none;
+        }
+    }
+
+    section#about-me {
+        .about-me-wrapper {
+            flex-basis: 100%;
+            padding: 50px 50px 20px 50px;
+            flex-direction: column;
+
+            .lifeline {
+                flex-basis: 600px;
+                // height: 500px;
+                order: 2;
+                padding: 0;
+
+                .line {
+                    top: 50%
+                }
+            }
+
+            .about-me-wrapper-right {
+                order: 1;
+            }
+        }
+    }
+
+    section#services {
+        .services-wrapper {
+            flex-basis: 100%;
+            padding: 50px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    section#about-me {
+        .about-me-wrapper {
+            flex-basis: 100%;
+            padding: 50px 30px 20px 30px;
+            flex-direction: column;
+
+            .about-me-wrapper-right {
+                padding: 0;
+                margin-bottom: 50px;
+            }
+
+            .lifeline {
+                flex-basis: 600px;
+                // height: 500px;
+                order: 2;
+                padding: 0;
+
+                .line {
+                    top: 50%
+                }
+            }
+
+            .about-me-wrapper-right {
+                order: 1;
+            }
+        }
+    }
+
+    section#services {
+        .services-wrapper {
+            flex-basis: 100%;
+            padding: 50px 30px;
+
+            .service-box {
+                .service {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    section#portfolio {
+        .portfolio-wrapper {
+            flex-basis: 100%;
+
+            .works {
+                justify-content: center;
+
+                .work {
+                    flex-basis: 350px;
+                    height: 350px;
+                }
+            }
+        }
+    }
+
+    .scroll-up {
+        right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    section#services {
+        .services-wrapper {
+            .service-box {
+                .service {
+                    flex-basis: 100%;
+                }
+            }
+        }
+    }
+
+    section#portfolio {
+        .portfolio-wrapper {
+            flex-basis: 100%;
+
+            .works {
+                justify-content: center;
+
+                .work {
+                    flex-basis: 520px;
+                    height: 520px;
+                    margin: 0 0 20px 0;
+
+                    &:last-of-type,
+                    &:nth-of-type(3n) {
+                        margin: 0 0 20px 0;
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    section#about-me {
+        .about-me-wrapper {
+            flex-basis: 100%;
+            padding: 60px 20px;
+            flex-direction: column;
+        }
+    }
+
+    section#services {
+        .services-wrapper {
+            padding: 60px 20px;
+
+            .service-box {
+                .service {
+                    height: 220px;
+                }
+            }
+        }
+    }
+
+    section#portfolio {
+        .portfolio-wrapper {
+            flex-basis: 100%;
+            padding: 60px 20px;
+            margin: 0;
+
+            .works {
+                justify-content: center;
+
+                .work {
+                    flex-basis: calc(100vw - 40px);
+                    height: calc(100vw - 40px);
+                    margin: 0 0 20px 0;
+                }
+            }
+        }
+    }
+
+    .scroll-up {
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        .hello {
+            font-size: 5rem;
+            width: 100%;
+            padding: 20px;
+        }
+    }
+
+    section#services {
+        .services-wrapper {
+            padding: 60px 20px;
+
+            .service-box {
+                .service {
+                    height: 210px;
+
+                    .left-side {
+                        flex-basis: 30%;
+
+                        img {
+                            width: 60%;
+                            flex-basis: 60%;
+                        }
+                    }
+
+                    .right-side {
+                        flex-basis: 70%;
+                        padding: 20px;
+
+                        h3 {
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .footer-up {
+            .wrapper {
+                padding: 50px 20px;
+            }
+        }
+
+        .footer-down {
+            .wrapper {
+                padding: 0 30px;
+            }
+        }
+    }
+
+    .scroll-up {
+        right: 20px;
+    }
+}
+
+@media (max-width: 390px) {
+
+    header {
+        min-height: 550px;
+
+        .hello {
+            font-size: 4rem;
+            width: 100%;
+            padding: 20px;
+        }
+    }
+
+    section#about-me {
+        .about-me-wrapper {
+            flex-basis: 100%;
+            padding: 50px 15px;
+            flex-direction: column;
+        }
+    }
+
+    section#services {
+        .services-wrapper {
+            padding: 50px 15px;
+        }
+    }
+
+    section#portfolio {
+        .portfolio-wrapper {
+            flex-basis: 100%;
+            padding: 50px 15px;
+            margin: 0;
+
+            .works {
+                .work {
+                    flex-basis: calc(100vw - 30px);
+                    height: calc(100vw - 30px);
+
+                    .info {
+                        .tech-wrapper {
+                            padding: 15px;
+
+                            h4 {
+                                font-size: 12px;
+                                margin: 0 5px 5px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    footer {
+        .footer-up {
+            .wrapper {
+                padding: 50px 15px;
+            }
+        }
+
+        .footer-down {
+            .wrapper {
+                padding: 0 15px;
+
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .scroll-up {
+        right: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    footer {
+        .footer-up {
+            .wrapper {
+                padding: 50px 15px;
+
+                .wrapper-left {
+                    h3 {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .footer-down {
+            .wrapper {
+                padding: 0 15px;
+
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
