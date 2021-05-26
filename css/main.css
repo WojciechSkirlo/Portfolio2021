@@ -202,10 +202,12 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url(../img/background.jpg);
+  background-image: url(../img/background-2.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
+  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 header .hello {
