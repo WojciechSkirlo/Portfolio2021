@@ -46,6 +46,9 @@ darker.addEventListener("click", function () {
     darker.classList.toggle("hidden");
 })
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 window.addEventListener("resize", function () {
     if (window.innerWidth > 1100) {
         belt1.classList.remove("rotate-up");
@@ -53,6 +56,9 @@ window.addEventListener("resize", function () {
         navMobile.classList.add("hidden");
         darker.classList.add("hidden");
     }
+
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 })
 
 const menuMobile = document.querySelectorAll(".menu-mobile");
@@ -65,7 +71,6 @@ menuMobile.forEach(element => {
         darker.classList.toggle("hidden");
     })
 });
-
 
 
 // CANVAS

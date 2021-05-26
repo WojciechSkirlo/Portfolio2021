@@ -1,10 +1,10 @@
 header {
     width: 100%;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     min-height: 600px;
     display: flex;
     flex-direction: column;
-    background-image: url(../img/back.png);
+    background-image: url(../img/background.jpg);
     background-position: center;
     background-size: cover;
     // background: $main-color-lighter;
@@ -82,7 +82,6 @@ header {
                     margin-left: 40px;
                 }
             }
-
         }
 
         .menu-wrapper {
@@ -249,6 +248,38 @@ header {
             }
         }
     }
+
+    .logo-mobile {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        display: none;
+
+        a {
+            text-decoration: none;
+
+            h2 {
+                font-weight: 400;
+                color: $main-color;
+                text-transform: uppercase;
+                padding: 4px 9px;
+                font-size: 22px;
+                line-height: 60px;
+
+                &.changecolor {
+                    color: $white-color;
+                    background: $main-color;
+                    transition: $main-animation;
+                }
+            }
+
+            img {
+                height: 40px;
+                margin-left: 40px;
+            }
+        }
+    }
+
 
     nav#mobile-nav {
         position: fixed;
