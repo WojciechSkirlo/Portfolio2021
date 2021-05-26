@@ -2,7 +2,7 @@
     section#about-me {
         .about-me-wrapper {
             flex-basis: 1200px;
-            padding: 100px 0 130px 0;
+            padding: 50px 0 100px 0;
         }
     }
 
@@ -39,6 +39,18 @@
 }
 
 @media (max-width: 1300px) {
+    header {
+        .hello {
+            width: 80%;
+        }
+
+        nav#main-nav {
+            .logo {
+                margin-left: 30px;
+            }
+        }
+    }
+
     section#about-me {
         .about-me-wrapper {
             flex-basis: 900px;
@@ -94,8 +106,16 @@
 @media (max-width: 1100px) {
 
     header {
-        nav {
+        #canvas {
+            height: 100%;
+        }
+
+        nav#main-nav {
             display: none;
+        }
+
+        nav#mobile-nav-hamburger {
+            display: block;
         }
     }
 
@@ -107,7 +127,6 @@
 
             .lifeline {
                 flex-basis: 600px;
-                // height: 500px;
                 order: 2;
                 padding: 0;
 
@@ -144,7 +163,6 @@
 
             .lifeline {
                 flex-basis: 600px;
-                // height: 500px;
                 order: 2;
                 padding: 0;
 
@@ -193,6 +211,13 @@
 }
 
 @media (max-width: 768px) {
+
+    header {
+        nav#mobile-nav {
+            width: 65%;
+        }
+    }
+
     section#services {
         .services-wrapper {
             .service-box {
@@ -230,6 +255,13 @@
 }
 
 @media (max-width: 576px) {
+
+    header {
+        nav#mobile-nav {
+            width: 70%;
+        }
+    }
+
     section#about-me {
         .about-me-wrapper {
             flex-basis: 100%;
@@ -274,6 +306,19 @@
 }
 
 @media (max-width: 480px) {
+
+    header {
+        nav#mobile-nav {
+            .wrapper {
+                .menu {
+                    a {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+
     header {
         .hello {
             font-size: 5rem;
@@ -332,6 +377,20 @@
 }
 
 @media (max-width: 390px) {
+
+    header {
+        nav#mobile-nav {
+            width: 100%;
+
+            .wrapper {
+                .menu {
+                    a {
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+    }
 
     header {
         min-height: 550px;

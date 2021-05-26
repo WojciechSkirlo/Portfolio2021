@@ -26,6 +26,47 @@ window.addEventListener("load", function () {
     document.body.classList.remove("hidden-o");
 });
 
+// MOBILE MENU
+const navHamburger = document.querySelector("#mobile-nav-hamburger");
+const belt1 = document.querySelector("#belt-1");
+const belt2 = document.querySelector("#belt-2");
+const navMobile = document.querySelector("#mobile-nav");
+const darker = document.querySelector("#darker");
+navHamburger.addEventListener("click", function () {
+    belt1.classList.toggle("rotate-up");
+    belt2.classList.toggle("rotate-down");
+    navMobile.classList.toggle("hidden");
+    darker.classList.toggle("hidden");
+})
+
+darker.addEventListener("click", function () {
+    belt1.classList.toggle("rotate-up");
+    belt2.classList.toggle("rotate-down");
+    navMobile.classList.toggle("hidden");
+    darker.classList.toggle("hidden");
+})
+
+window.addEventListener("resize", function () {
+    if (window.innerWidth > 1100) {
+        belt1.classList.remove("rotate-up");
+        belt2.classList.remove("rotate-down");
+        navMobile.classList.add("hidden");
+        darker.classList.add("hidden");
+    }
+})
+
+const menuMobile = document.querySelectorAll(".menu-mobile");
+
+menuMobile.forEach(element => {
+    element.addEventListener("click", function () {
+        belt1.classList.toggle("rotate-up");
+        belt2.classList.toggle("rotate-down");
+        navMobile.classList.toggle("hidden");
+        darker.classList.toggle("hidden");
+    })
+});
+
+
 
 // CANVAS
 window.onload = function () {

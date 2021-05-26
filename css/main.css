@@ -38,18 +38,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 30px;
-}
-
-#loader .wrapper h2 {
-  text-transform: uppercase;
-  font-weight: 100;
-  font-size: 30px;
-  margin-bottom: 60px;
 }
 
 #loader .wrapper .loader-wrapper .gooey {
@@ -99,6 +87,16 @@
           filter: blur(4px);
   background: #000;
   border-radius: 50%;
+}
+
+.dark {
+  background: rgba(61, 193, 211, 0.8);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
 }
 
 .hidden-o {
@@ -204,7 +202,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url(/img/back3.jpg);
+  background-image: url(../img/back.png);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -229,7 +227,19 @@ header #canvas {
   height: calc(100% - 70px);
 }
 
-header nav {
+header #darker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 17, 26, 0.5);
+  z-index: 4;
+  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+header nav#main-nav {
   -ms-flex-preferred-size: 70px;
       flex-basis: 70px;
   top: 0;
@@ -245,7 +255,7 @@ header nav {
           justify-content: space-between;
 }
 
-header nav.newcolor {
+header nav#main-nav.newcolor {
   background: #fff;
   -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
   transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -253,7 +263,7 @@ header nav.newcolor {
           box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 
-header nav .logo {
+header nav#main-nav .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,11 +273,11 @@ header nav .logo {
   margin-left: 50px;
 }
 
-header nav .logo a {
+header nav#main-nav .logo a {
   text-decoration: none;
 }
 
-header nav .logo a h2 {
+header nav#main-nav .logo a h2 {
   font-weight: 400;
   color: #3dc1d3;
   text-transform: uppercase;
@@ -275,25 +285,25 @@ header nav .logo a h2 {
   font-size: 22px;
 }
 
-header nav .logo a h2.changecolor {
+header nav#main-nav .logo a h2.changecolor {
   color: #fff;
   background: #3dc1d3;
   -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
   transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-header nav .logo a img {
+header nav#main-nav .logo a img {
   height: 40px;
   margin-left: 40px;
 }
 
-header nav .menu-wrapper {
+header nav#main-nav .menu-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header nav .menu-wrapper .menu {
+header nav#main-nav .menu-wrapper .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,7 +312,7 @@ header nav .menu-wrapper .menu {
           align-items: center;
 }
 
-header nav .menu-wrapper .menu a {
+header nav#main-nav .menu-wrapper .menu a {
   text-transform: uppercase;
   text-decoration: none;
   margin: 0 30px;
@@ -316,7 +326,7 @@ header nav .menu-wrapper .menu a {
   z-index: 2;
 }
 
-header nav .menu-wrapper .menu a::before {
+header nav#main-nav .menu-wrapper .menu a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -329,7 +339,7 @@ header nav .menu-wrapper .menu a::before {
   transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-header nav .menu-wrapper .menu a::after {
+header nav#main-nav .menu-wrapper .menu a::after {
   content: "";
   position: absolute;
   top: 0;
@@ -342,19 +352,19 @@ header nav .menu-wrapper .menu a::after {
   transition: 250ms 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-header nav .menu-wrapper .menu a:hover::before {
+header nav#main-nav .menu-wrapper .menu a:hover::before {
   right: 0;
 }
 
-header nav .menu-wrapper .menu a:hover::after {
+header nav#main-nav .menu-wrapper .menu a:hover::after {
   left: 0;
 }
 
-header nav .menu-wrapper .menu a:hover {
+header nav#main-nav .menu-wrapper .menu a:hover {
   color: #fff;
 }
 
-header nav .menu-wrapper .socialmedia {
+header nav#main-nav .menu-wrapper .socialmedia {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -366,7 +376,7 @@ header nav .menu-wrapper .socialmedia {
           align-items: center;
 }
 
-header nav .menu-wrapper .socialmedia a {
+header nav#main-nav .menu-wrapper .socialmedia a {
   text-decoration: none;
   color: #000;
   height: 50px;
@@ -384,15 +394,15 @@ header nav .menu-wrapper .socialmedia a {
   transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-header nav .menu-wrapper .socialmedia a.fb:hover {
+header nav#main-nav .menu-wrapper .socialmedia a.fb:hover {
   color: #3b5998;
 }
 
-header nav .menu-wrapper .socialmedia a.github:hover {
+header nav#main-nav .menu-wrapper .socialmedia a.github:hover {
   color: #24292e;
 }
 
-header nav .menu-wrapper .socialmedia a.contact {
+header nav#main-nav .menu-wrapper .socialmedia a.contact {
   background: #3dc1d3;
   color: #fff;
   height: 70px;
@@ -402,12 +412,192 @@ header nav .menu-wrapper .socialmedia a.contact {
           transform: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-header nav .menu-wrapper .socialmedia a.contact:hover {
+header nav#main-nav .menu-wrapper .socialmedia a.contact:hover {
   background: #000;
 }
 
-header nav .menu-wrapper .socialmedia a i {
+header nav#main-nav .menu-wrapper .socialmedia a i {
   font-size: 17px;
+}
+
+header nav#mobile-nav-hamburger {
+  display: none;
+  background: #fff;
+  -ms-flex-preferred-size: 70px;
+      flex-basis: 70px;
+  height: 60px;
+  width: 60px;
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 10;
+  cursor: pointer;
+  -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 8px, rgba(17, 17, 26, 0.05) 0px 4px 16px;
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 8px, rgba(17, 17, 26, 0.05) 0px 4px 16px;
+}
+
+header nav#mobile-nav-hamburger .box {
+  position: absolute;
+  width: 35px;
+  height: 17px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+header nav#mobile-nav-hamburger .box .wrapper .belt {
+  width: 100%;
+  height: 3px;
+  background: #000;
+  border-radius: 50px;
+  position: absolute;
+  left: 0;
+}
+
+header nav#mobile-nav-hamburger .box .wrapper .belt.top {
+  top: 0;
+  -webkit-transition: top 0.2s 0.2s, -webkit-transform 0.2s;
+  transition: top 0.2s 0.2s, -webkit-transform 0.2s;
+  transition: top 0.2s 0.2s, transform 0.2s;
+  transition: top 0.2s 0.2s, transform 0.2s, -webkit-transform 0.2s;
+}
+
+header nav#mobile-nav-hamburger .box .wrapper .belt.bottom {
+  bottom: 0;
+  -webkit-transition: bottom 0.2s 0.2s, -webkit-transform 0.2s;
+  transition: bottom 0.2s 0.2s, -webkit-transform 0.2s;
+  transition: bottom 0.2s 0.2s, transform 0.2s;
+  transition: bottom 0.2s 0.2s, transform 0.2s, -webkit-transform 0.2s;
+}
+
+header nav#mobile-nav-hamburger .box .wrapper .belt.rotate-up {
+  -webkit-transition: top 0.3s, -webkit-transform 0.3s 0.3s;
+  transition: top 0.3s, -webkit-transform 0.3s 0.3s;
+  transition: top 0.3s, transform 0.3s 0.3s;
+  transition: top 0.3s, transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: calc(50% - 1.5px);
+  left: 0;
+}
+
+header nav#mobile-nav-hamburger .box .wrapper .belt.rotate-down {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: calc(50% - 1.5px);
+  left: 0;
+  -webkit-transition: bottom 0.3s, -webkit-transform 0.3s 0.3s;
+  transition: bottom 0.3s, -webkit-transform 0.3s 0.3s;
+  transition: bottom 0.3s, transform 0.3s 0.3s;
+  transition: bottom 0.3s, transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+}
+
+header nav#mobile-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 50%;
+  background: #fff;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  padding: 50px;
+  -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 8px, rgba(17, 17, 26, 0.05) 0px 4px 16px;
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 8px, rgba(17, 17, 26, 0.05) 0px 4px 16px;
+}
+
+header nav#mobile-nav .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header nav#mobile-nav .wrapper .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+header nav#mobile-nav .wrapper .menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 23px;
+  padding: 10px;
+  margin: 10px 0;
+  color: #000;
+  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+header nav#mobile-nav .wrapper .menu a:hover {
+  background: #3dc1d3;
+  color: #fff;
+}
+
+header nav#mobile-nav .wrapper .socialmedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav#mobile-nav .wrapper .socialmedia a {
+  height: 45px;
+  width: 45px;
+  margin: 0 10px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav#mobile-nav .wrapper .socialmedia a:last-of-type {
+  background: #3dc1d3;
+}
+
+header nav#mobile-nav .wrapper .socialmedia a i {
+  font-size: 21px;
+  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+header nav#mobile-nav.hidden {
+  left: -100%;
 }
 
 header .scroll-down {
@@ -1150,7 +1340,7 @@ footer .footer-down .wrapper p a:hover {
   section#about-me .about-me-wrapper {
     -ms-flex-preferred-size: 1200px;
         flex-basis: 1200px;
-    padding: 100px 0 130px 0;
+    padding: 50px 0 100px 0;
   }
   section#services .services-wrapper {
     -ms-flex-preferred-size: 1200px;
@@ -1174,6 +1364,12 @@ footer .footer-down .wrapper p a:hover {
 }
 
 @media (max-width: 1300px) {
+  header .hello {
+    width: 80%;
+  }
+  header nav#main-nav .logo {
+    margin-left: 30px;
+  }
   section#about-me .about-me-wrapper {
     -ms-flex-preferred-size: 900px;
         flex-basis: 900px;
@@ -1217,8 +1413,14 @@ footer .footer-down .wrapper p a:hover {
 }
 
 @media (max-width: 1100px) {
-  header nav {
+  header #canvas {
+    height: 100%;
+  }
+  header nav#main-nav {
     display: none;
+  }
+  header nav#mobile-nav-hamburger {
+    display: block;
   }
   section#about-me .about-me-wrapper {
     -ms-flex-preferred-size: 100%;
@@ -1310,6 +1512,9 @@ footer .footer-down .wrapper p a:hover {
 }
 
 @media (max-width: 768px) {
+  header nav#mobile-nav {
+    width: 65%;
+  }
   section#services .services-wrapper .service-box .service {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -1338,6 +1543,9 @@ footer .footer-down .wrapper p a:hover {
 }
 
 @media (max-width: 576px) {
+  header nav#mobile-nav {
+    width: 70%;
+  }
   section#about-me .about-me-wrapper {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -1376,6 +1584,9 @@ footer .footer-down .wrapper p a:hover {
 }
 
 @media (max-width: 480px) {
+  header nav#mobile-nav .wrapper .menu a {
+    font-size: 22px;
+  }
   header .hello {
     font-size: 5rem;
     width: 100%;
@@ -1416,6 +1627,12 @@ footer .footer-down .wrapper p a:hover {
 }
 
 @media (max-width: 390px) {
+  header nav#mobile-nav {
+    width: 100%;
+  }
+  header nav#mobile-nav .wrapper .menu a {
+    font-size: 21px;
+  }
   header {
     min-height: 550px;
   }

@@ -4,9 +4,10 @@ header {
     min-height: 600px;
     display: flex;
     flex-direction: column;
-    background-image: url(img/back3.jpg);
+    background-image: url(../img/back.png);
     background-position: center;
     background-size: cover;
+    // background: $main-color-lighter;
     position: relative;
 
     .hello {
@@ -27,7 +28,18 @@ header {
         height: calc(100% - 70px);
     }
 
-    nav {
+    #darker {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(17, 17, 26, 0.5);
+        z-index: 4;
+        transition: $main-animation;
+    }
+
+    nav#main-nav {
         flex-basis: 70px;
         top: 0;
         right: 0;
@@ -176,6 +188,140 @@ header {
                     }
                 }
             }
+        }
+    }
+
+    // Mobile nav
+    nav#mobile-nav-hamburger {
+        display: none;
+        background: $white-color;
+        flex-basis: 70px;
+        height: 60px;
+        width: 60px;
+        top: 0;
+        right: 0;
+        position: fixed;
+        z-index: 10;
+        cursor: pointer;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 8px, rgba(17, 17, 26, 0.05) 0px 4px 16px;
+
+        .box {
+            position: absolute;
+            width: 35px;
+            height: 17px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            .wrapper {
+                .belt {
+                    width: 100%;
+                    height: 3px;
+                    background: #000;
+                    border-radius: 50px;
+                    position: absolute;
+                    left: 0;
+
+                    &.top {
+                        top: 0;
+                        transition: top 0.2s 0.2s, transform 0.2s;
+                    }
+
+                    &.bottom {
+                        bottom: 0;
+                        transition: bottom 0.2s 0.2s, transform 0.2s;
+                    }
+
+                    &.rotate-up {
+                        transition: top 0.3s, transform 0.3s 0.3s;
+                        transform: rotate(-45deg);
+                        top: calc(50% - 1.5px);
+                        left: 0;
+                    }
+
+                    &.rotate-down {
+                        transform: rotate(45deg);
+                        bottom: calc(50% - 1.5px);
+                        left: 0;
+                        transition: bottom 0.3s, transform 0.3s 0.3s;
+                    }
+                }
+            }
+        }
+    }
+
+    nav#mobile-nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 50%;
+        background: $white-color;
+        z-index: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: $main-animation;
+        padding: 50px;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 8px, rgba(17, 17, 26, 0.05) 0px 4px 16px;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+
+            .menu {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
+                text-align: center;
+
+                a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-weight: 200;
+                    font-size: 23px;
+                    padding: 10px;
+                    margin: 10px 0;
+                    color: $black-color;
+                    transition: $main-animation;
+
+                    &:hover {
+                        background: $main-color;
+                        color: $white-color;
+                    }
+                }
+            }
+
+            .socialmedia {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    height: 45px;
+                    width: 45px;
+                    margin: 0 10px;
+                    background: $black-color;
+                    color: $white-color;
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:last-of-type {
+                        background: $main-color;
+                    }
+
+                    i {
+                        font-size: 21px;
+                        transition: $main-animation;
+                    }
+                }
+            }
+        }
+
+        &.hidden {
+            left: -100%;
         }
     }
 
