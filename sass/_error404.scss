@@ -4,7 +4,7 @@ main#error404 {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to left, rgba(61, 193, 211, 0.65), rgba(61, 193, 211, 0.3));
+    background: $white-color;
 
     .wrapper {
         padding: 50px;

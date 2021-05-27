@@ -1426,8 +1426,7 @@ main#error404 {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(61, 193, 211, 0.65)), to(rgba(61, 193, 211, 0.3)));
-  background: linear-gradient(to left, rgba(61, 193, 211, 0.65), rgba(61, 193, 211, 0.3));
+  background: #fff;
 }
 
 main#error404 .wrapper {
