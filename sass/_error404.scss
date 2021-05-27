@@ -1,0 +1,37 @@
+main#error404 {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to left, rgba(61, 193, 211, 0.65), rgba(61, 193, 211, 0.3));
+
+    .wrapper {
+        padding: 50px;
+        position: absolute;
+        text-align: center;
+
+        h1 {
+            font-size: 5rem;
+            font-weight: 100;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 200;
+            margin-bottom: 30px;
+        }
+
+        a {
+            padding: 8px 25px;
+            font-weight: 200;
+            background: $black-color;
+            font-size: 15px;
+            text-decoration: none;
+            color: $white-color;
+            text-transform: uppercase;
+        }
+    }
+}

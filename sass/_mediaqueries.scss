@@ -40,10 +40,6 @@
 
 @media (max-width: 1300px) {
     header {
-        .hello {
-            width: 80%;
-        }
-
         nav#main-nav {
             .logo {
                 margin-left: 30px;
@@ -106,6 +102,10 @@
 @media (max-width: 1100px) {
 
     header {
+        .wrapper-introduction {
+            width: 70%;
+        }
+
         #canvas {
             height: calc(100% - 60px);
         }
@@ -304,6 +304,18 @@
     .scroll-up {
         right: 20px;
     }
+
+    main#error404 {
+        .wrapper {
+            h1 {
+                font-size: 3.8rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+    }
 }
 
 @media (max-width: 480px) {
@@ -321,10 +333,13 @@
             }
         }
 
-        .hello {
-            font-size: 5rem;
+        .wrapper-introduction {
             width: 100%;
-            padding: 20px;
+
+            .hello {
+                font-size: 5rem;
+                padding: 20px;
+            }
         }
     }
 
@@ -398,8 +413,6 @@
 
         .hello {
             font-size: 4rem;
-            width: 100%;
-            padding: 20px;
         }
     }
 
@@ -464,6 +477,20 @@
 
     .scroll-up {
         right: 15px;
+    }
+
+    main#error404 {
+        .wrapper {
+            padding: 30px;
+
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
     }
 }
 

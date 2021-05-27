@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <title>Error 404 - Woytek</title>
+    <meta name="description"
+        content="Tak właściwie to nazywam się Skirło Wojciech. Pochodzę z niewielkiej miejscowości położonej 50 km od Krakowa. Od najmłodszych lat interesuję się komputerem a w 2021 roku zostałem absolwentem kierunku Technik Informatyk. Z każdym dniem wzbogacam się o nowe umiejętności a w przyszłości chcę pracować jako FRONTEND DEVELOPER." />
+    <meta name="keywords"
+        content="woytek, wojciechskirlo, skirło, wojciech, wojtek, skirlo, strona internetowa, strony internetowe, strona internetowa na zamówienie, strony internetowe, brzesko, brzesko strona internetowa," />
+    <link rel="Shortcut icon" href="img/works/thumbnail-woytek.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Hotjar Tracking Code for https://wojciechskirlo.github.io/Portfolio2021/ -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 2422455, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+</head>
+
+<body>
+
+    <main id="error404">
+        <div class="wrapper">
+            <h1>Error 404</h1>
+            <h2>Oops! Nie udało nam się znaleźć strony</h2>
+            <a href="index.html">wróć do strony głównej</a>
+        </div>
+        <canvas id="canvas"></canvas>
+    </main>
+
+    <!-- SCRIPTS -->
+
+    <!-- SPACEWORM -->
+    <script src="js/spaceworm.js"></script>
+    <script>
+        window.requestAnimFrame = (function () {
+            return (
+                window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame ||
+                function (callback) {
+                    window.setTimeout(callback);
+                }
+            );
+        });
+
+        function init(elemid) {
+            let canvas = document.getElementById(elemid),
+                c = canvas.getContext("2d"),
+                w = (canvas.width = window.innerWidth),
+                h = (canvas.height = window.innerHeight);
+            c.fillStyle = "rgba(30,30,30,1)";
+            c.fillRect(0, 0, w, h);
+            return { c: c, canvas: canvas };
+        }
+    </script>
+
+</body>
+
+</html>

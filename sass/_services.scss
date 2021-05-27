@@ -37,7 +37,7 @@ section#services {
                 &:hover {
                     .left-side {
                         &::before {
-                            height: 70%;
+                            height: 75%;
                             width: 100%;
                         }
                     }
@@ -53,7 +53,7 @@ section#services {
                     right: 0;
                     top: -100%;
                     width: 1px;
-                    height: 70%;
+                    height: 75%;
                     background: $third-color;
                     transition: $main-animation;
                 }
