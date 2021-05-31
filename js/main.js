@@ -73,3 +73,18 @@ menuMobile.forEach(element => {
         darker.classList.toggle("hidden");
     })
 });
+
+// Scroll Animation
+window.addEventListener("scroll", function () {
+    if (window.innerWidth <= 768) {
+        let distanceTop = window.pageYOffset;
+        let distanceElementsTop = document.querySelectorAll(".work");
+        distanceElementsTop.forEach(element => {
+            if (((distanceTop + 300) > element.offsetTop) && ((distanceTop - 100) < element.offsetTop)) {
+                element.classList.add("show");
+            } else {
+                element.classList.remove("show");
+            }
+        })
+    }
+})
