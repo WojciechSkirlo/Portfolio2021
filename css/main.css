@@ -26,8 +26,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 #loader.hidden {
@@ -295,8 +295,8 @@ header #darker {
   height: 100%;
   background: rgba(17, 17, 26, 0.5);
   z-index: 4;
-  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 header nav#main-nav {
@@ -317,8 +317,8 @@ header nav#main-nav {
 
 header nav#main-nav.newcolor {
   background: #fff;
-  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
   -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
           box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
@@ -348,8 +348,8 @@ header nav#main-nav .logo a h2 {
 header nav#main-nav .logo a h2.changecolor {
   color: #fff;
   background: #3dc1d3;
-  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 header nav#main-nav .logo a img {
@@ -450,8 +450,8 @@ header nav#main-nav .menu-wrapper .socialmedia a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 header nav#main-nav .menu-wrapper .socialmedia a.fb:hover {
@@ -468,8 +468,8 @@ header nav#main-nav .menu-wrapper .socialmedia a.contact {
   height: 70px;
   width: 70px;
   margin: 0;
-  -webkit-transform: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
-          transform: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transform: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
+          transform: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 header nav#main-nav .menu-wrapper .socialmedia a.contact:hover {
@@ -588,8 +588,8 @@ header nav#mobile-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
   padding: 50px;
   -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 8px, rgba(17, 17, 26, 0.05) 0px 4px 16px;
           box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 8px, rgba(17, 17, 26, 0.05) 0px 4px 16px;
@@ -625,8 +625,8 @@ header nav#mobile-nav .wrapper .menu a {
   padding: 10px;
   margin: 10px 0;
   color: #000;
-  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 header nav#mobile-nav .wrapper .menu a:hover {
@@ -670,8 +670,8 @@ header nav#mobile-nav .wrapper .socialmedia a:last-of-type {
 
 header nav#mobile-nav .wrapper .socialmedia a i {
   font-size: 21px;
-  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 header nav#mobile-nav.hidden {
@@ -729,8 +729,8 @@ header .scroll-down span {
   font-size: 14px;
   text-transform: uppercase;
   padding: 18px;
-  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .scroll-up:hover {
@@ -984,8 +984,8 @@ section#services .services-wrapper .service-box .service::before {
   width: 1px;
   height: 75%;
   background: #ced6e0;
-  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 section#services .services-wrapper .service-box .service .left-side {
@@ -1011,8 +1011,8 @@ section#services .services-wrapper .service-box .service .left-side::before {
   background: rgba(61, 193, 211, 0.4);
   height: 75%;
   width: 1px;
-  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 section#services .services-wrapper .service-box .service .left-side img {
@@ -1335,8 +1335,8 @@ footer .footer-up .wrapper .wrapper-left .socialmedia .social a {
 }
 
 footer .footer-up .wrapper .wrapper-left .socialmedia .social a:hover i {
-  -webkit-transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 350ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 footer .footer-up .wrapper .wrapper-left .socialmedia .social a:hover i.fa-github {
