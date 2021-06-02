@@ -80,7 +80,7 @@ window.addEventListener("scroll", function () {
         let distanceTop = window.pageYOffset;
         let distanceElementsTop = document.querySelectorAll(".work");
         distanceElementsTop.forEach(element => {
-            if (((distanceTop + 300) > element.offsetTop) && ((distanceTop - 100) < element.offsetTop)) {
+            if (((distanceTop + 300) > element.offsetTop) && ((distanceTop - 90) < element.offsetTop)) {
                 element.classList.add("show");
             } else {
                 element.classList.remove("show");
