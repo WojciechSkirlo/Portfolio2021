@@ -1103,7 +1103,7 @@ section#portfolio .portfolio-wrapper p {
 }
 
 section#portfolio .portfolio-wrapper p i {
-  margin-left: 5px;
+  margin-left: 8px;
 }
 
 section#portfolio .works {
@@ -1770,7 +1770,7 @@ main#error404 .wrapper a {
   }
   header .wrapper-introduction .hello {
     font-size: 5rem;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
   }
   section#services .services-wrapper {
     padding: 60px 20px;
@@ -1795,6 +1795,9 @@ main#error404 .wrapper a {
   section#services .services-wrapper .service-box .service .right-side h3 {
     font-size: 17px;
   }
+  section#portfolio .portfolio-wrapper p {
+    padding: 20px 0;
+  }
   footer .footer-up .wrapper {
     padding: 50px 20px;
   }
@@ -1816,8 +1819,10 @@ main#error404 .wrapper a {
   header {
     min-height: 550px;
   }
-  header .hello {
+  header .wrapper-introduction .hello {
     font-size: 4rem;
+    margin-bottom: 20px;
+    padding-top: 0;
   }
   section#about-me .about-me-wrapper {
     -ms-flex-preferred-size: 100%;
@@ -1836,6 +1841,9 @@ main#error404 .wrapper a {
         flex-basis: 100%;
     padding: 50px 15px;
     margin: 0;
+  }
+  section#portfolio .portfolio-wrapper p {
+    padding: 20px 30px;
   }
   section#portfolio .portfolio-wrapper .works .work {
     -ms-flex-preferred-size: calc(100vw - 30px);
@@ -1873,6 +1881,15 @@ main#error404 .wrapper a {
 }
 
 @media (max-width: 360px) {
+  section#portfolio .portfolio-wrapper {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 50px 15px;
+    margin: 0;
+  }
+  section#portfolio .portfolio-wrapper p {
+    padding: 20px 40px;
+  }
   footer .footer-up .wrapper {
     padding: 50px 15px;
   }

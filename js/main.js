@@ -61,8 +61,8 @@ darker.addEventListener("click", function () {
     darker.classList.toggle("hidden");
 })
 
-// let vh = window.innerHeight * 0.01;
-// document.documentElement.style.setProperty('--vh', `${vh}px`);
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 window.addEventListener("resize", function () {
     if (window.innerWidth > 1100) {
@@ -88,9 +88,10 @@ menuMobile.forEach(element => {
 });
 
 
+let noHover = [...document.querySelectorAll(".work")];
+
 function hideAndShowElement() {
     let infoPortfolio = document.querySelector(".portfolio-wrapper p span").textContent;
-    let noHover = [...document.querySelectorAll(".work")];
     if (window.innerWidth <= 1100) {
         noHover.forEach(item => {
             item.classList.add("no-hover");
@@ -117,7 +118,7 @@ function hideAndShowElement() {
                 noHover[i].classList.remove("show");
             }
         })
-        let infoPortfolioTab = infoPortfolio.split(" ").map(item => item === "Najedź," ? item = "Kliknij," : item).join(" ");
+        let infoPortfolioTab = infoPortfolio.split(" ").map(item => item === "Najedź" ? item = "Kliknij" : item).join(" ");
         document.querySelector(".portfolio-wrapper p span").textContent = infoPortfolioTab;
 
     } else {
@@ -126,8 +127,31 @@ function hideAndShowElement() {
             item.classList.remove("show");
         })
 
-        let infoPortfolioTab = infoPortfolio.split(" ").map(item => item === "Kliknij," ? item = "Najedź," : item).join(" ");
+        let infoPortfolioTab = infoPortfolio.split(" ").map(item => item === "Kliknij" ? item = "Najedź" : item).join(" ");
         document.querySelector(".portfolio-wrapper p span").textContent = infoPortfolioTab;
     }
 }
 hideAndShowElement();
+
+function hideElements() {
+    let infoPortfolio = document.querySelector(".portfolio-wrapper p span").textContent;
+    if (window.innerWidth <= 1100) {
+        noHover.forEach(item => {
+            item.classList.add("no-hover");
+        })
+
+        let infoPortfolioTab = infoPortfolio.split(" ").map(item => item === "Najedź" ? item = "Kliknij" : item).join(" ");
+        document.querySelector(".portfolio-wrapper p span").textContent = infoPortfolioTab;
+
+    } else {
+        noHover.forEach(item => {
+            item.classList.remove("no-hover");
+            item.classList.remove("show");
+        })
+
+        let infoPortfolioTab = infoPortfolio.split(" ").map(item => item === "Kliknij" ? item = "Najedź" : item).join(" ");
+        document.querySelector(".portfolio-wrapper p span").textContent = infoPortfolioTab;
+    }
+}
+
+window.addEventListener("resize", hideElements);
