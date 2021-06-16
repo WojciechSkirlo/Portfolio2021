@@ -83,7 +83,7 @@ section#portfolio {
 
             img {
                 width: 40%;
-                transition: transform 100ms $second-animation;
+                transition: transform 300ms 200ms linear;
             }
 
             .info {
