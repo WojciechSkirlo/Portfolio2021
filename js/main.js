@@ -3,11 +3,24 @@ const scrollToTop = document.querySelector("#scroll-to-top");
 const nav = document.querySelector("#main-nav");
 const myName = document.querySelector("#name");
 document.addEventListener("scroll", function () {
+    let s = scrollToTop.style;
     let distance = window.pageYOffset;
-    if (distance > 550) {
+    if (distance >= 500) {
         scrollToTop.classList.remove("hidden");
+        s.opacity = 0;
+        show(s);
     } else {
         scrollToTop.classList.add("hidden");
+        s.opacity = 0.8;
+        hide(s);
+    }
+
+    function show(s) {
+        s.opacity = 0.8;
+    }
+
+    function hide(s) {
+        s.opacity = 0;
     }
 
     if (distance > 50) {
@@ -74,17 +87,48 @@ menuMobile.forEach(element => {
     })
 });
 
-// Scroll Animation
-window.addEventListener("scroll", function () {
-    if (window.innerWidth <= 768) {
-        let distanceTop = window.pageYOffset;
-        let distanceElementsTop = document.querySelectorAll(".work");
-        distanceElementsTop.forEach(element => {
-            if (((distanceTop + 300) > element.offsetTop) && ((distanceTop - 90) < element.offsetTop)) {
-                element.classList.add("show");
-            } else {
-                element.classList.remove("show");
+
+function hideAndShowElement() {
+    let infoPortfolio = document.querySelector(".portfolio-wrapper p span").textContent;
+    let noHover = [...document.querySelectorAll(".work")];
+    if (window.innerWidth <= 1100) {
+        noHover.forEach(item => {
+            item.classList.add("no-hover");
+        })
+        let desInThePicOld = "";
+        let desInThePicNew = "";
+        let indexOld = undefined;
+        for (let i = 0; i < noHover.length; i++) {
+            noHover[i].addEventListener("click", (e) => {
+                e.stopPropagation();
+                desInThePicNew = noHover[i].childNodes[1].getAttribute("alt");
+                if (desInThePicNew !== desInThePicOld && indexOld != undefined) {
+                    noHover[i].classList.toggle("show");
+                    noHover[indexOld].classList.remove("show");
+                } else {
+                    noHover[i].classList.toggle("show");
+                }
+                desInThePicOld = noHover[i].childNodes[1].getAttribute("alt");
+                indexOld = i;
+            })
+        }
+        window.addEventListener("click", function (e) {
+            for (let i = 0; i < noHover.length; i++) {
+                noHover[i].classList.remove("show");
             }
         })
+        let infoPortfolioTab = infoPortfolio.split(" ").map(item => item === "Najedź," ? item = "Kliknij," : item).join(" ");
+        document.querySelector(".portfolio-wrapper p span").textContent = infoPortfolioTab;
+
+    } else {
+        noHover.forEach(item => {
+            item.classList.remove("no-hover");
+            item.classList.remove("show");
+        })
+
+        let infoPortfolioTab = infoPortfolio.split(" ").map(item => item === "Kliknij," ? item = "Najedź," : item).join(" ");
+        document.querySelector(".portfolio-wrapper p span").textContent = infoPortfolioTab;
     }
-})
+}
+hideAndShowElement();
+window.addEventListener("resize", hideAndShowElement);

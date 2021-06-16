@@ -18,7 +18,18 @@ section#portfolio {
             padding: 4px 9px;
             display: inline-block;
             align-self: center;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 15px;
+            text-align: center;
+            font-weight: 200;
+            padding: 20px;
+
+            i {
+                margin-left: 5px;
+            }
         }
     }
 
@@ -50,6 +61,16 @@ section#portfolio {
                 }
             }
 
+            &.no-hover {
+                .info {
+                    right: -100%;
+                }
+
+                img {
+                    transform: none;
+                }
+            }
+
             &.show {
                 .info {
                     right: 0;
@@ -62,7 +83,7 @@ section#portfolio {
 
             img {
                 width: 40%;
-                transition: 100ms $second-animation;
+                transition: transform 100ms $second-animation;
             }
 
             .info {
@@ -72,7 +93,7 @@ section#portfolio {
                 background: rgba(61, 193, 211, 0.8);
                 width: 100%;
                 height: 100%;
-                transition: $second-animation;
+                transition: right $second-animation;
                 padding: 40px;
                 display: flex;
                 flex-direction: column;
@@ -146,4 +167,18 @@ section#portfolio {
             margin-bottom: 0;
         }
     }
+}
+
+#info-portfolio {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: $white-color;
+    background: $main-color;
+    z-index: 10;
+    font-size: 14px;
+    transition: $main-animation;
 }
