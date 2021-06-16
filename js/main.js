@@ -131,4 +131,3 @@ function hideAndShowElement() {
     }
 }
 hideAndShowElement();
-window.addEventListener("resize", hideAndShowElement);
