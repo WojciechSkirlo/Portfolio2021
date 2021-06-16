@@ -1099,7 +1099,7 @@ section#portfolio .portfolio-wrapper p {
   font-size: 15px;
   text-align: center;
   font-weight: 200;
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 section#portfolio .portfolio-wrapper p i {
@@ -1836,6 +1836,9 @@ main#error404 .wrapper a {
         flex-basis: 100%;
     padding: 50px 15px;
     margin: 0;
+  }
+  section#portfolio .portfolio-wrapper p {
+    padding: 20px;
   }
   section#portfolio .portfolio-wrapper .works .work {
     -ms-flex-preferred-size: calc(100vw - 30px);
